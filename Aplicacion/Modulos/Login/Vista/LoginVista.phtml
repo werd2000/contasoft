@@ -1,0 +1,21 @@
+<div id="login" class="login">
+<h2>Iniciar Sesi&oacute;n</h2>
+
+<form method="post" action="index.php?option=login&sub=validarLogin">
+    <input type="hidden" value="1" name="enviar" />
+    
+    <p>
+        <label>Usuario: </label>
+        <input type="text" name="username" class="input" value="<?php if(isset($this->datos)) echo $this->datos['usuario']; ?>" />
+    </p>
+    
+    <p>
+        <label>Password: </label>
+        <input type="password" class="input" name="password" />
+    </p>
+    
+    <p>
+        <input type="submit" value="enviar" class="boton"/>
+    </p>
+</form>
+</div>
