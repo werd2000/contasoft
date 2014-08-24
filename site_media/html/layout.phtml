@@ -1,0 +1,24 @@
+<?php
+require_once ('Zend/View/Helper/Doctype.php');
+$doctypeHelper = new Zend_View_Helper_Doctype();
+$doctypeHelper->doctype('XHTML5');
+echo $this->doctype();
+echo "<html>\n";
+echo "<head>\n";
+echo $this->partial('HeadVista.php');
+echo "</head>\n";
+echo "<body>\n";
+echo "<div id=\"contenedor\" class=\"ui-corner-all\">\n";
+// view helper propio para crear el header del sitio
+echo $this->partial('EncabezadoVista.php');
+// mostrando el contenido de la vista
+echo $this->layout()->content;
+echo $this->layout()->widgets;
+// view helper propio para crear el footer
+echo $this->partial('FinHtml.php');
+echo "</div>\n";
+echo "</body>\n";
+echo "</html>\n";
+
+
+
